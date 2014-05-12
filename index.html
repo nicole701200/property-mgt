@@ -168,11 +168,48 @@
 </footer>
         </div>
         <!--Paradigm Promo-->
-       <div class="panel" title="Paradigm Promo" id="paradigmpromo"style="background-color:#dde0e8;">
+         <script>
+		 var carousel;
+			function init_carousel() {
+				carousel=$("#carousel").carousel({
+					pagingDiv: "carousel_dots",
+					pagingCssName: "carousel_paging2",
+					pagingCssNameSelected: "carousel_paging2_selected",
+					preventDefaults:false,
+					wrap:true //Set to false to disable the wrap around
+				});
+			}
+			window.addEventListener("load", init_carousel, false);
+		
+		</script>
+        <script src="https://rawgithub.com/01org/appframework/master/build/appframework.js"></script>
+<script src="scripts/af.carousel.js"></script>
+        <div class="panel" title="Paradigm Promo" id="paradigmpromo"style="background-color:#dde0e8;">
         <header>
             <a id="backButton" class="button backButton">&nbsp;</a>
                 <h1>Paradigm Promo</h1>
-                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+                
+            </header>
+        <div id="carousel_dots" style="text-align: center; margin:auto;  display : table; clear: both; position: relative; top: 40%; z-index: 200">
+			</div>
+			<div id="carousel" style="display:block;height:100%;width:100%; z-index:0">
+					<div style="background: white;">
+						<img style="z-index:-10" src="images/promo/paradigm1.jpg" />
+						</div>
+					<div style="background: white;"><img style="z-index:-10" src="images/promo/paradigm1.jpg" /></div>
+					<div style="background: white;"><img style="z-index:-10" src="images/promo/paradigm1.jpg" /></div>
+					<div style="background: white;"><img style="z-index:-10" src="images/promo/paradigm1.jpg" /></div>
+				</div>
+                <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer>  
+        </div>
+       <!--<div class="panel" title="Paradigm Promo" id="paradigmpromo"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Paradigm Promo</h1>
+                
             </header>
             <div style="z-index:10; position:absolute; background-color:#17af86; padding:20px 30px; color:#fff; font-size:16px; margin-top:355px; margin-left:50px; text-align:center;"><a style="color:#fff; text-decoration:none;" href="#storelocator">Store<br>Locator</a></div>
             <div style="z-index:10; position:absolute; background-color:#d5732b; padding:20px 30px; color:#fff; font-size:16px; margin-top:355px; margin-left:170px; text-align:center;"><a style="color:#fff; text-decoration:none;" href="#happening">Events &amp;<br>Promotions</a></div>
@@ -181,7 +218,9 @@
   <a class="icon home" href="#main">&nbsp;</a>
 
 </footer>  
-        </div>
+        </div>-->
+        
+        
         
          <!--Store Categories-->
        <div class="panel" title="Paradigm Promo" id="storelocator"style="background-color:#dde0e8;">

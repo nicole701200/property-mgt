@@ -3604,3 +3604,32 @@ header{background:#CCC !important;}
 
 .mycartproduct{display:inline; font-size:11px; display:table; padding:10px 0; background-color:#fff; border-top:1px solid #ccc; border-bottom:1px solid #fff;}
 .mycartproduct li{width:22%; min-width:130px; padding:0 10px; float:left; list-style:none; vertical-align:middle; xborder-top:1px solid #e6e6e6; background-color:#fff;}
+
+
+/* mwuSlider */
+.carousel_paging2 {
+			border-radius: 10px;
+			
+			background: #ccc;
+			width: 10px;
+			height: 10px;
+			display:inline-block;
+		}
+
+		.carousel_paging2_selected {
+			border-radius: 10px;
+			
+			background: #000;
+			width: 10px;
+			height: 10px;
+			display:inline-block;
+		}
+
+		.spacer {
+			width: 10px;
+			float: left;
+		}
+
+		.carousel_content {
+			-webkit-transform: translate3d(0, 0, 0);
+		}
