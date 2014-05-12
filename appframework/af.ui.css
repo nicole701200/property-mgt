@@ -190,7 +190,7 @@ body {
 #afui #navbar a {
 	-webkit-box-sizing:border-box;
 	box-sizing: border-box;
-	top: 3px;
+	top: 10px;
 	height: 43px;
 	overflow: hidden;
 	font-size:12px;
@@ -683,7 +683,7 @@ body {
 #afui > #navbar {
     background:#0088D1;
     border:none;
-    border-top:1px solid #0088D1;
+    border-top:1px solid #888;
     box-shadow:none;
 }
 
@@ -1809,7 +1809,7 @@ color:inherit;
 #afui.android > #navbar {
     box-shadow: none;
  	background:inherit;
- 	border-top:2px solid #33B5E5;
+ 	border-top:2px solid #888;
     border-bottom:none;
     padding:0;
 }
@@ -2972,7 +2972,7 @@ color:inherit;
 }
 
 #afui.ios7 .afPopup>FOOTER{
-    border-top:1px solid #aaa;
+    border-top:1px solid #888;
 }
 
 #afui.ios7 .afPopup .button {
@@ -3554,7 +3554,7 @@ h1, p{padding:10px;}
 #afui > #navbar {
     background:#434f5b;
     border:none;
-    border-top:1px solid #0088D1;
+    border-top:1px solid #666;
     box-shadow:none;
 }
 
