@@ -68,7 +68,8 @@ body {
 #afui #modalContainer > * {
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
-	background: black;
+	background-image:  url(../images/bg.jpg);
+	background:white;
     color:white;
 }
 
@@ -1046,7 +1047,7 @@ body {
   margin-left: -25px;
 }
 #afui input[type="radio"]:checked + label:before {
-  background-color: #fff;
+  background-color: #000000;
 }
 #afui input[type="checkbox"] + label:before {
   background-color: #fafafa;
@@ -1566,7 +1567,7 @@ BODY>DIV#mask{
     display:block;
     width:100%;
     height:100%;
-    background:#fff;
+    background:#000;
     z-index: 999999;
     position:absolute;
     top:0;
@@ -3369,6 +3370,11 @@ color:white;
 
 
 /*=======mycss=============*/
+#afui.android #content,#afui.android #content > .panel {
+ 	background:#fff;
+	background-image:  url(../images/bg.jpg);
+ 	color:#333;
+}
 
 .loginfieldbg{padding:20px 10px;  background-color:#1a517f;-moz-box-shadow:    inset 0 0 10px #16466e;
 -webkit-box-shadow: inset 0 0 10px #16466e;
@@ -3428,10 +3434,10 @@ border:1px solid #d2d2d2;
 
 
 #afui .panel {
-    color:inherit;
+    color:#333;
 	background-color:#fff;
-	background-image:  url(../images/bg.jpg);
-    background-size:   cover;             
+	background-image:  url(../images/bg.jpg) !important;
+    background-size:   cover !important;             
     background-repeat: no-repeat;
 }
 
@@ -3491,6 +3497,7 @@ margin-top:20px;
 } /* Accounts for positioning of the content area, which is everything below the header and above the navbar. */
 
 
+	
 #afui .panel {
 	z-index:180;
 	width:100%;
