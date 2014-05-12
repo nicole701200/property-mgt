@@ -3420,17 +3420,17 @@ border:1px solid #d2d2d2;
 .mainmenu {padding:0; margin:0;}
 
 
-.icon-mall{background:url(../images/icon/mall.png) no-repeat; padding:7px 7px 7px 40px;}
+.icon-mall{background:url(../images/icon/mall.png) no-repeat; padding:7px 7px 7px 40px; color:#444;}
 
-.icon-promo{background:url(../images/icon/promotion.png) no-repeat; padding:7px 7px 7px 40px;}
+.icon-promo{background:url(../images/icon/promotion.png) no-repeat; padding:7px 7px 7px 40px; color:#444;}
 
-.icon-cart{background:url(../images/icon/cart.png) no-repeat; padding:7px 7px 7px 40px;}
+.icon-cart{background:url(../images/icon/cart.png) no-repeat; padding:7px 7px 7px 40px; color:#444;}
 
-.icon-wishlist{background:url(../images/icon/wishlist.png) no-repeat; padding:7px 7px 7px 40px;}
+.icon-wishlist{background:url(../images/icon/wishlist.png) no-repeat; padding:7px 7px 7px 40px; color:#444;}
 
-.icon-member{background:url(../images/icon/membership.png) no-repeat; padding:7px 7px 7px 40px;}
+.icon-member{background:url(../images/icon/membership.png) no-repeat; padding:7px 7px 7px 40px; color:#444;}
 
-.icon-profile{background:url(../images/icon/profile.png) no-repeat; padding:7px 7px 7px 40px;}
+.icon-profile{background:url(../images/icon/profile.png) no-repeat; padding:7px 7px 7px 40px; color:#444;}
 
 
 #afui .panel {
