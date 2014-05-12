@@ -3535,9 +3535,9 @@ h1, p{padding:10px;}
 }
 
 #afui > #header{
-    background:#d5d9e2 !important;
+    background:#e6e6e6 !important;
     border:none;
-    border-bottom:1px solid #b1b4ba;
+    border-bottom:1px solid #b1b4ba !important;
     color:#666 !important;
 }
 
