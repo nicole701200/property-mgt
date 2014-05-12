@@ -3535,10 +3535,10 @@ h1, p{padding:10px;}
 }
 
 #afui > #header{
-    background:#d5d9e2;
+    background:#d5d9e2 !important;
     border:none;
     border-bottom:1px solid #b1b4ba;
-    color:#666;
+    color:#666 !important;
 }
 
 #afui .list > li > a {
@@ -3567,6 +3567,8 @@ border-radius: 50px; margin-left:70%; font-size:12px;}
     border-radius:0;    
     background:#434f5b;
 }
+
+header{background:#CCC !important;}
 /*======grid=======*/
 .grid-photo {margin:15px; padding-top:30px;}
 .grid-photo:after {content:'';display:block;clear:both;}
