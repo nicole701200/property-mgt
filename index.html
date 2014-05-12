@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login template</title>
+<!--
+    This template can be used for creating apps that require user login and user registration before starting actual app.
+--> 
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
+    
+    <link rel="stylesheet" type="text/css" href="appframework/af.ui.css" />
+    <link rel="stylesheet" type="text/css" href="appframework/icons.css" />
+    <script type="text/javascript" charset="utf-8" src="appframework/appframework.ui.min.js"></script>
+
+<!-- Required if packaging to native app using Intel XDK -->    
+    <script src="intelxdk.js"></script>
+    <script src="xhr.js"></script>
+    <script>    
+        function onDeviceReady(){ 
+            $.ui.launch();
+            intel.xdk.device.hideSplashScreen();
+        }
+        document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+    </script>
+<!-- end Intel XDK code -->
+    
+    <script>   
+        $.ui.autoLaunch = false; 
+        $.ui.backButtonText = "Back";
+    
+        $(document).ready(function(){
+            $.ui.launch();
+            
+            // setup signin and signup button events
+            $("#login").on("click", function(){
+                signIn();
+            });
+            
+            $("#register").on("click", function(){
+                signUp();
+            });
+				
+			
+	
+        });
+                
+        function signIn(){
+            
+            // sigin code here
+            
+            $.ui.loadContent("main", null, null, "fade");
+        }
+                
+        function signUp(){
+        
+            // signup code here
+            
+            $.ui.loadContent("main", null, null, "fade");
+        }   
+                
+        function startApp(){
+            // clears all back button history
+            $.ui.clearHistory();  
+            
+            // your app code here
+        }
+
+    </script> 
+    
+     
+    
+</head>
+<body> 
+<div id="afui">
+    
+    <div id="content" style=""> 
+        
+    <!-- Views -->
+        
+       <!-- Welcome View -->
+        <div class="panel" title="Welcome" id="page1" data-header="none" data-footer="none" selected="true" style="padding:0;">
+            <div style="text-align:center">
+            <br>
+            <br>
+            <h1>&nbsp;</h1>
+            <br>
+            <br>
+            <p>&nbsp;</p>
+            <br>
+            <br>
+            </div>    
+            <ul class="list inset">
+                <li><a href="#signin" style="text-align:center"><img src="images/logo.png" alt="IFCA Logo"></a></li>
+            </ul>
+        </div>
+        
+        <!-- Login View -->
+        <div class="panel" title="Login" id="signin" data-footer="none" data-header="none">
+            <div style="text-align:left">
+            <br>
+            <h1 class="logoh1"><img src="images/logo.png" alt="IFCA Logo"></h1>
+            <br>
+            </div>
+            <p class="loginfieldbg">
+            <b>Enter your username and password:</b>
+            <br>
+            <br>
+            
+            <input name="username" type="text" placeholder="username" />
+            <input name="password" type="password" placeholder="password" /><span class="sublink"><a href="">Forgot password</a>|<a href="">Register</a></span></p>
+            <a class="button block green" href="#" id="login" style="text-align:center;">Login</a>
+        </div>
+        
+        <!-- Register View -->
+        <div class="panel" title="Register" id="signup" data-footer="none">
+            <div style="text-align:center">
+            <br>
+            <br>
+            <p>This is space for register message</p>
+            <br>
+            <br>
+            </div>
+            <input name="name" type="text" placeholder="Name" />
+            <input name="email" type="text" placeholder="Email" />
+            <input name="username" type="text" placeholder="username" />
+            <input name="password" type="password" placeholder="password" />
+            <input name="password2" type="password" placeholder="confirm password" />
+            <a class="button block green" href="#" id="register">Register</a>
+        </div>
+
+        
+        <!-- Main App View -->
+        <div class="panel" title="Welcome" id="main" data-load="startApp" data-footer="none" style="background-color:#dde0e8;">
+        <ul class="mainmenu list">
+            <li><a class="button block grey" href="#shopmall" id="mall"><span class="icon-mall">Shopping Mall</span></a></li>
+            <li><a class="button block grey" href="#defaultpromo" id="mall"><span class="icon-promo">New Promotions</span></a></li>
+            <li><a class="button block grey" href="#mycart" id="mall"><span class="icon-cart">My Cart (3)</span></a></li>
+            <li><a class="button block grey" href="#wishlist" id="mall"><span class="icon-wishlist">My Wishlist</span></a></li>
+            <li><a class="button block grey" href="#membership" id="mall"><span class="icon-member">Membership</span></a></li>
+            <li><a class="button block grey" href="#profile" id="mall"><span class="icon-profile">Profile</span></a></li>
+            </ul>
+            
+        </div>
+        
+        
+        
+        <!--Shopping Mall-->
+        <div class="panel" title="Shopping Mall" id="shopmall" style="background-color:#dde0e8; margin-top:-8px;">
+            <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Shopping Mall</h1>
+                <a href="#" class="button icon refresh" style="float:right"></a>
+            </header>
+            <ul class="grid-photo">
+                <li><div class="grid-photo-box"><a href="#item1"><span class="notificationnum">3</span><img src="images/logo/mall/1u.jpg" /></a></div></li>
+                <li><div class="grid-photo-box"><a href="#paradigmpromo"><span class="notificationnum">1</span><img src="images/logo/mall/paradigm.jpg" /></a></div></li>
+                <li><div class="grid-photo-box"><a href="#item3"><img src="images/logo/mall/pavillion.jpg" /></a></div></li>
+                <li><div class="grid-photo-box"><a href="#item4"><img src="images/logo/mall/mv.jpg" /></a></div></li>
+                <li><div class="grid-photo-box"><a href="#item5"><img src="images/logo/mall/tropicana.jpg" /></a></div></li>
+                <li><div class="grid-photo-box"><a href="#item6"><span class="notificationnum">1</span><img src="images/logo/mall/timesquare.jpg" /></a></div></li>
+                <li><div class="grid-photo-box"><a href="#item7"><img src="images/logo/mall/pyramid.jpg" /></a></div></li>
+                <li><div class="grid-photo-box"><a href="#item8"><img src="images/logo/mall/ioi.jpg" /></a></div></li>
+                <li><div class="grid-photo-box"><a href="#item9"><img src="images/logo/mall/klcc.jpg" /></a></div></li>
+                
+            </ul>
+            <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer>
+        </div>
+        <!--Paradigm Promo-->
+       <div class="panel" title="Paradigm Promo" id="paradigmpromo"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Paradigm Promo</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+            <div style="z-index:10; position:absolute; background-color:#17af86; padding:20px 30px; color:#fff; font-size:16px; margin-top:355px; margin-left:50px; text-align:center;"><a style="color:#fff; text-decoration:none;" href="#storelocator">Store<br>Locator</a></div>
+            <div style="z-index:10; position:absolute; background-color:#d5732b; padding:20px 30px; color:#fff; font-size:16px; margin-top:355px; margin-left:170px; text-align:center;"><a style="color:#fff; text-decoration:none;" href="#happening">Events &amp;<br>Promotions</a></div>
+        <img style="z-index:-10" src="images/promo/paradigm1.jpg" />
+          <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer>  
+        </div>
+        
+         <!--Store Categories-->
+       <div class="panel" title="Paradigm Promo" id="storelocator"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Store Categories</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+             <ul class="mainmenu list">
+             <li style="margin:0; padding:0; background-color:#d7dbe3"><img src="images/paradigm-slogo.jpg"></li>
+            <li><a class="button block grey" href="#" id="mall">Books, Gifts, Toys &amp; Hobbies</a></li>
+            <li><a class="button block grey" href="#" id="mall">Digital &amp; Gadget</a></li>
+            <li><a class="button block grey" href="#" id="mall">Entertainment</a></li>
+            <li><a class="button block grey" href="#" id="mall">Food &amp; Beverages</a></li>
+            <li><a class="button block grey" href="#" id="mall">Fashion</a></li>
+            <li><a class="button block grey" href="#sports" id="mall">Sports</a></li>
+            <li><a class="button block grey" href="#" id="mall">Home Furnishing &amp; Lifestyle</a></li>
+            </ul>
+          <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer> 
+
+</div>
+ <!--Sports-->
+        <div class="panel" title="Shopping Mall" id="sports" style="background-color:#dde0e8; margin-top:-8px;">
+            <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Sports</h1>
+            </header>
+            <ul class="grid-photo">
+                <li><div class="grid-photo-box"><a href="#adidas"><span class="notificationnum">3</span><img src="images/logo/sports/adidas.jpg" /></a></div></li>
+                <li><div class="grid-photo-box"><a href="#"><span class="notificationnum">1</span><img src="images/logo/sports/rsh.jpg" /></a></div></li>
+                <li><div class="grid-photo-box"><a href="#"><img src="images/logo/sports/sportsland.jpg" /></a></div></li>
+                <li><div class="grid-photo-box"><a href="#"><img src="images/logo/sports/sun.jpg" /></a></div></li>
+                <li><div class="grid-photo-box"><a href="#"><img src="images/logo/sports/ws.jpg" /></a></div></li>
+                
+                
+            </ul>
+            <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer>
+        </div>
+        
+        <!--adidas-->
+       <div class="panel" title="Paradigm Promo" id="adidas"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Adidas</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+            <div style="z-index:10; position:absolute; background-color:#dd2752; padding:10px 30px; color:#fff; font-size:16px; margin-top:355px; margin-left:100px; text-align:center;"><a style="color:#fff; text-decoration:none;" href="#adidasproducts">View More</a></div>
+        <img style="z-index:-10;" src="images/promo/adidas.jpg" width="330" />
+          <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer>  
+        </div>
+        
+        <!--Adidas Promo-->
+       <div class="panel" title="Adidas Promotions" id="adidasproducts"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Adidas Promotions</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+            <div style="margin:0; padding:0; background-color:#d7dbe3"><img src="images/paradigm-slogo.jpg"></div>
+             <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li><b>Essentials 3-Stripes Cap II</b><br><img src="images/adidas/star.png" width="60" style="margin-top:6px;"></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:60px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+            <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li><b>Essentials 3-Stripes Cap II</b><br><img src="images/adidas/star.png" width="60" style="margin-top:6px;"></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:60px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+            <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li><b>Essentials 3-Stripes Cap II</b><br><img src="images/adidas/star.png" width="60" style="margin-top:6px;"></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:60px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+            <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li><b>Essentials 3-Stripes Cap II</b><br><img src="images/adidas/star.png" width="60" style="margin-top:6px;"></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:60px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+            <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li><b>Essentials 3-Stripes Cap II</b><br><img src="images/adidas/star.png" width="60" style="margin-top:6px;"></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:60px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+            <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li><b>Essentials 3-Stripes Cap II</b><br><img src="images/adidas/star.png" width="60" style="margin-top:6px;"></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:60px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+            <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li><b>Essentials 3-Stripes Cap II</b><br><img src="images/adidas/star.png" width="60" style="margin-top:6px;"></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:60px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+          <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer> 
+
+</div>
+
+
+<!--Adidas details-->
+       <div class="panel" title="Essentials 3-Stripes Cap II" id="pdetails"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Essentials 3-Stripes Cap II</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+            <div style="margin:0; padding:0; background-color:#d7dbe3"><img src="images/paradigm-slogo.jpg"></div>
+             <ul class="adidasdetail">
+             <li><img src="images/adidas/dproducts.jpg"></li>
+             <li><h3>Essentials 3-Stripes Cap II</h3><br><img src="images/adidas/star.png" width="80" style="margin-top:6px;"><br><s>RM200</s><b style="margin-left:20px; font-size:16px;">RM100</b><br><a href="">Add to wishlist</a><br><a href="#">Share this</a><br><br><a href="#mycart"><img src="images/adidas/addcart-btn.png" width="130"></a></li>
+             </ul>
+             <ul class="adidasdetail">
+             <li style="min-width:400px;"><h3>Overview</h3><br>•  burning sun out of your face when you<br>
+•  Buckle adjustable back strap<br>
+•  Medium pre-curved brim; Six-panel<br>
+•  low-crown<br>
+•  structured A-Flex construction<br>
+•  Embroidered 3-Stripes and adidas brandmark</li>
+             </ul>
+          <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer> 
+
+</div>
+
+
+<!--My Cart-->
+       <div class="panel" title="My Cart" id="mycart"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>My Cart</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+            <ul class="mycartproduct"><li style="min-width:100px;"><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li style="min-width:180px;"><b style="font-size:12px;">Essentials 3-Stripes Cap II</b><br><br><b>Price: RM 100</b><br><br><b>Qty: <input type="text"></b></li><li style="min-width:60px; text-align:right;"><a href="#pform"><img src="images/crossbtn.png"></a></li></ul></li>            
+            </ul>
+            <ul class="mycartproduct"><li style="min-width:100px;"><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li style="min-width:180px;"><b style="font-size:12px;">Essentials 3-Stripes Cap II</b><br><br><b>Price: RM 100</b><br><br><b>Qty: <input type="text"></b></li><li style="min-width:60px; text-align:right;"><a href="#pform"><img src="images/crossbtn.png"></a></li></ul></li>            
+            </ul>
+            
+            
+            
+            <ul class="mycartproduct"><li style="min-width:133px; font-weight:bold; font-size:14px;">Total: RM337.90</li><li style="min-width:180px;"><a href="#cform"><img src="images/checkoutbtn.png" width="210"></a></li>          
+            </ul>
+            <ul class="mycartproduct"><li style="min-width:220px; font-weight:bold; font-size:14px;">&nbsp;</li><li style="min-width:140px; font-size:12px;"><a style="text-decoration:none;" href="#adidasproducts">&laquo; Continue shopping</a></li>          
+            </ul>
+         
+            
+          <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer> 
+
+</div>
+
+<!--checkout form-->
+       <div class="panel" title="Check out" id="cform"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Check out</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+            <div style="margin:0; padding:0;"><img src="images/formimg.jpg"></div>
+            <ul class="mycartproduct"><li style="width:400px; font-size:12px; font-weight:bold;">Fill up the form to enjoy our privilege.</li>            
+            </ul>
+             <ul class="mycartproduct"><li style="min-width:400px;"><b style="float:left; font-size:12px; padding-top:10px; padding-right:10px; padding-left:10px; width:130px;">Your Email: <span style="color:#F00">*</span> </b><b style="float:left;"><input type="text"></b></li>
+             <li style="min-width:400px;"><b style="float:left; font-size:12px; padding-top:10px;padding-right:10px; padding-left:10px; width:130px;">Your Name: <span style="color:#F00">*</span> </b><b style="float:left;"><input type="text"></b></li>
+             <li style="min-width:400px;"><b style="float:left; font-size:12px; padding-top:10px;padding-right:10px; padding-left:10px; width:130px;">Your Contact:  </b><b style="float:left;"><input type="text"></b></li>
+             <li style="min-width:400px;"><b style="float:left; font-size:12px; padding-top:10px;padding-right:10px; padding-left:10px; width:130px;">Address: <span style="color:#F00">*</span> </b><b style="float:left;"><input type="text"></b></li>
+             </ul>
+             
+             <ul class="mycartproduct"><li style="width:400px; text-align:right;"><span style="color:#F00">*</span> Indicates required fields</li></ul>
+             <ul class="mycartproduct" style="width:400px; background-color:#fff;"><li style="width:80px;"><a href="#ccpayment"><img src="images/confirm-btn.png" width="75"></a></li><li style="width:200px;"><a href="#ccpayment"><img width="235" src="images/skiptopaymentbtn.png"></a></li></ul>
+          <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer> 
+
+</div>
+
+
+<!--payment-->
+       <div class="panel" title="Payment" id="ccpayment"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Payment</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+            <ul class="mycartproduct"><li style="width:400px;"><img src="images/creditcard.jpg" width="340"></li>            
+            </ul>
+             
+             <ul class="mycartproduct" style="width:400px; background-color:#fff;"><li style="width:200px;"><a href="#thankspayment"><img width="190" src="images/completebtn.png"></a></li><li style="width:90px;"><a href="#thankspayment"><img src="images/cancelbtn.png" width="85"></a></li></ul>
+             
+             <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer> 
+</div>
+             
+             <!--thankspayment-->
+       <div class="panel" title="Thank you" id="thankspayment"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Thank you</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+            <div style="margin:0; padding:0;"><img src="images/formimg.jpg"></div>
+            <ul class="mycartproduct" style="font-size:20px;"><li style="min-width:400px; background-color:none;">Thanks for the payment.</li>            
+            </ul>
+           
+          <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer> 
+
+</div>
+
+
+<!--Default Promo-->
+       <div class="panel" title="New Promotions" id="defaultpromo"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>New Promotions</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+            <div style="z-index:10; position:absolute; background-color:#dd2752; padding:10px 30px; color:#fff; font-size:16px; margin-top:355px; margin-left:100px; text-align:center;"><a style="color:#fff; text-decoration:none;" href="#">View More</a></div>
+        <img style="z-index:-10;" src="images/promo/default.jpg" width="350" />
+          <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer>  
+        </div>
+     
+     
+<!--wishlist-->
+       <div class="panel" title="My Wishlist" id="wishlist"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>My Wishlist</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+             <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li style="min-width:110px"><b>Essentials 3-Stripes Cap II</b><br><img src="images/locationicon.png" width="8" style="margin-top:6px;"><span style=" color:#C00"> Paradigm Mall: Adidas</span></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:30px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+             <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li style="min-width:110px"><b>Essentials 3-Stripes Cap II</b><br><img src="images/locationicon.png" width="8" style="margin-top:6px;"><span style=" color:#C00"> Paradigm Mall: Adidas</span></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:30px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+             <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li style="min-width:110px"><b>Essentials 3-Stripes Cap II</b><br><img src="images/locationicon.png" width="8" style="margin-top:6px;"><span style=" color:#C00"> Paradigm Mall: Adidas</span></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:30px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+            <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li style="min-width:110px"><b>Essentials 3-Stripes Cap II</b><br><img src="images/locationicon.png" width="8" style="margin-top:6px;"><span style=" color:#C00"> Paradigm Mall: Adidas</span></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:30px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+             <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li style="min-width:110px"><b>Essentials 3-Stripes Cap II</b><br><img src="images/locationicon.png" width="8" style="margin-top:6px;"><span style=" color:#C00"> Paradigm Mall: Adidas</span></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:30px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+             <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li style="min-width:110px"><b>Essentials 3-Stripes Cap II</b><br><img src="images/locationicon.png" width="8" style="margin-top:6px;"><span style=" color:#C00"> Paradigm Mall: Adidas</span></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:30px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+             <ul class="adidaspromo"><li><img src="images/adidas/p1.jpg" width="80px" alt="product1"></li><li style="min-width:110px"><b>Essentials 3-Stripes Cap II</b><br><img src="images/locationicon.png" width="8" style="margin-top:6px;"><span style=" color:#C00"> Paradigm Mall: Adidas</span></li><li style="min-width:60px;"><s style="font-size:10px;">RM200</s><br><b style="font-size:12px;">RM100</b></li><li style="min-width:30px; text-align:right;"><a href="#pdetails"><img src="images/adidas/cart-btn.png"></a></li></ul></li>            
+            </ul>
+          <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer> 
+
+</div>   
+
+
+<!--membership-->
+       <div class="panel" title="Membership" id="membership"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Membership</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+            <div style="z-index:10; position:absolute; background-color:#dd2752; padding:10px 30px; color:#fff; font-size:16px; margin-top:355px; margin-left:100px; text-align:center;"><a style="color:#fff; text-decoration:none;" href="#">View More</a></div>
+        <img style="z-index:-10;" src="images/membership.jpg" width="350" />
+          <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer>  
+        </div> 
+        
+        
+        
+        <!--profile-->
+       <div class="panel" title="Profile" id="profile"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>My Profile</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+            <div style="z-index:10; position:absolute; background-color:#dd2752; padding:10px 30px; color:#fff; font-size:16px; margin-top:355px; margin-left:100px; text-align:center;"><a style="color:#fff; text-decoration:none;" href="#">View More</a></div>
+        <img style="z-index:-10;" src="images/profile.jpg" width="360" />
+          <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer>  
+        </div> 
+        
+        
+        
+        <!--Hapenning-->
+       <div class="panel" title="Happening" id="happening"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Happening</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+            <div style="margin:0; padding:0; background-color:#d7dbe3"><img src="images/paradigm-slogo.jpg"></div>
+             <ul class="adidaspromo"><li><img src="images/mall-event/e1.jpg" width="80px" alt="product1"></li><li style="min-width:160px"><b style="color:#F60; font-size:12px;">May 2014</b><br><b style="font-size:12px;">Essentials 3-Stripes Cap II</b></li><li style="min-width:100px; text-align:right;"><a href="#"><img src="images/mall-event/followbtn.png"></a></li></ul></li>            
+            </ul>
+            <ul class="adidaspromo"><li><img src="images/mall-event/e1.jpg" width="80px" alt="product1"></li><li style="min-width:160px"><b style="color:#F60; font-size:12px;">May 2014</b><br><b style="font-size:12px;">Essentials 3-Stripes Cap II</b></li><li style="min-width:100px; text-align:right;"><a href="#"><img src="images/mall-event/followbtn.png"></a></li></ul></li>            
+            </ul>
+             <ul class="adidaspromo"><li><img src="images/mall-event/e1.jpg" width="80px" alt="product1"></li><li style="min-width:160px"><b style="color:#F60; font-size:12px;">May 2014</b><br><b style="font-size:12px;">Essentials 3-Stripes Cap II</b></li><li style="min-width:100px; text-align:right;"><a href="#"><img src="images/mall-event/followbtn.png"></a></li></ul></li>            
+            </ul>
+            <ul class="adidaspromo"><li><img src="images/mall-event/e1.jpg" width="80px" alt="product1"></li><li style="min-width:160px"><b style="color:#F60; font-size:12px;">May 2014</b><br><b style="font-size:12px;">Essentials 3-Stripes Cap II</b></li><li style="min-width:100px; text-align:right;"><a href="#"><img src="images/mall-event/followbtn.png"></a></li></ul></li>            
+            </ul>
+           <ul class="adidaspromo"><li><img src="images/mall-event/e1.jpg" width="80px" alt="product1"></li><li style="min-width:160px"><b style="color:#F60; font-size:12px;">May 2014</b><br><b style="font-size:12px;">Essentials 3-Stripes Cap II</b></li><li style="min-width:100px; text-align:right;"><a href="#"><img src="images/mall-event/followbtn.png"></a></li></ul></li>            
+            </ul>
+           <ul class="adidaspromo"><li><img src="images/mall-event/e1.jpg" width="80px" alt="product1"></li><li style="min-width:160px"><b style="color:#F60; font-size:12px;">May 2014</b><br><b style="font-size:12px;">Essentials 3-Stripes Cap II</b></li><li style="min-width:100px; text-align:right;"><a href="#"><img src="images/mall-event/followbtn.png"></a></li></ul></li>            
+            </ul>
+            <ul class="adidaspromo"><li><img src="images/mall-event/e1.jpg" width="80px" alt="product1"></li><li style="min-width:160px"><b style="color:#F60; font-size:12px;">May 2014</b><br><b style="font-size:12px;">Essentials 3-Stripes Cap II</b></li><li style="min-width:100px; text-align:right;"><a href="#"><img src="images/mall-event/followbtn.png"></a></li></ul></li>            
+            </ul>
+          <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer> 
+
+</div> 
+
+<!--payment-->
+       <div class="panel" title="Adidas" id="storedetails"style="background-color:#dde0e8;">
+        <header>
+            <a id="backButton" class="button backButton">&nbsp;</a>
+                <h1>Adidas</h1>
+                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+            </header>
+            <div style="margin:0; padding:0; background-color:#d7dbe3"><img src="images/paradigm-slogo.jpg"></div>
+            <ul class="mycartproduct"><li style="width:400px;"><img src="images/adidas/storepic.jpg" width="340"></li>            
+            </ul>
+            <ul class="mycartproduct" >
+            <li style="width:400px;">Adidas</li>            
+            </ul>
+             
+             <ul class="mycartproduct" style="width:400px; background-color:#fff;"><li style="width:100px;"><a href="#"><img style="border:2px solid #e6e6e6" src="images/logo/sports/adidas.jpg" width="100" /></a></li><li style="width:90px; padding-top:20px;">Lot 43, Level UG <br> Tel: +603 7887 1866<br><br><a href="#adidasproducts"><img src="images/adidas/promobtn.png" width="120"></a></li></ul>
+             
+             <footer>
+  <a class="icon home" href="#main">&nbsp;</a>
+
+</footer> 
+</div>             
+    </div>
+
+</div>
+
+</body>
+</html>    
