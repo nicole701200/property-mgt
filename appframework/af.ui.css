@@ -688,7 +688,7 @@ body {
 }
 
 #afui #navbar a {
- 
+ top:10px
 }
 
 #afui #navbar a.pressed {
@@ -1816,7 +1816,7 @@ color:inherit;
 
 #afui.android #navbar a {
 	color:inherit;
-    top:0px;
+    top:10px;
 }
 
 #afui.android #navbar a.pressed {
