@@ -65,9 +65,24 @@
         }
 
     </script> 
-    
-     
-    
+    <!--slider-->
+      <script>
+		 var carousel;
+			function init_carousel() {
+				carousel=$("#carousel").carousel({
+					pagingDiv: "carousel_dots",
+					pagingCssName: "carousel_paging2",
+					pagingCssNameSelected: "carousel_paging2_selected",
+					preventDefaults:false,
+					wrap:true //Set to false to disable the wrap around
+				});
+			}
+			window.addEventListener("load", init_carousel, false);
+		
+		</script>
+        <script src="https://rawgithub.com/01org/appframework/master/build/appframework.js"></script>
+<script src="scripts/af.carousel.js"></script>
+    <!--end slider-->
 </head>
 <body> 
 <div id="afui">
@@ -168,22 +183,7 @@
 </footer>
         </div>
         <!--Paradigm Promo-->
-         <script>
-		 var carousel;
-			function init_carousel() {
-				carousel=$("#carousel").carousel({
-					pagingDiv: "carousel_dots",
-					pagingCssName: "carousel_paging2",
-					pagingCssNameSelected: "carousel_paging2_selected",
-					preventDefaults:false,
-					wrap:true //Set to false to disable the wrap around
-				});
-			}
-			window.addEventListener("load", init_carousel, false);
-		
-		</script>
-        <script src="https://rawgithub.com/01org/appframework/master/build/appframework.js"></script>
-<script src="scripts/af.carousel.js"></script>
+        
         <div class="panel" title="Paradigm Promo" id="paradigmpromo"style="background-color:#dde0e8;">
         <header>
             <a id="backButton" class="button backButton">&nbsp;</a>
@@ -269,19 +269,30 @@
         </div>
         
         <!--adidas-->
-       <div class="panel" title="Paradigm Promo" id="adidas"style="background-color:#dde0e8;">
+        <div class="panel" title="Adidas Promo" id="adidas"style="background-color:#dde0e8;">
         <header>
             <a id="backButton" class="button backButton">&nbsp;</a>
-                <h1>Adidas</h1>
-                <!--<a href="#" class="button icon refresh" style="float:right"></a>-->
+                <h1>Adidas Promo</h1>
+                
             </header>
-            <div style="z-index:10; position:absolute; background-color:#dd2752; padding:10px 30px; color:#fff; font-size:16px; margin-top:355px; margin-left:100px; text-align:center;"><a style="color:#fff; text-decoration:none;" href="#adidasproducts">View More</a></div>
+        <div id="carousel_dots" style="left:2%;display : table; clear: both; position: absolute; top: 5%; z-index: 200">
+			</div>
+			<div id="carousel" style="display:block;height:100%;width:100%; z-index:0">
+					<div style="background: white;">
+                    <div style="z-index:10; position:absolute; background-color:#dd2752; padding:10px 30px; color:#fff; font-size:16px; margin-top:355px; margin-left:100px; text-align:center;"><a style="color:#fff; text-decoration:none;" href="#adidasproducts">View More</a></div>
         <img style="z-index:-10;" src="images/promo/adidas.jpg" width="330" />
-          <footer>
+						<img style="z-index:-10" src="images/promo/adidas.jpg" />
+						</div>
+					<div style="background: white;"><img style="z-index:-10" src="images/promo/adidas.jpg" /></div>
+					<div style="background: white;"><img style="z-index:-10" src="images/promo/adidas.jpg" /></div>
+					<div style="background: white;"><img style="z-index:-10" src="images/promo/adidas.jpg" /></div>
+				</div>
+                <footer>
   <a class="icon home" href="#main">&nbsp;</a>
 
 </footer>  
         </div>
+       
         
         <!--Adidas Promo-->
        <div class="panel" title="Adidas Promotions" id="adidasproducts"style="background-color:#dde0e8;">
