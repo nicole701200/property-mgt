@@ -3636,4 +3636,6 @@ header{background:#CCC !important;}
 		
 		@media only screen and (max-width : 320px) {
 			#carousel img{width:320px;}
+			#carousel2 img{width:320px;}
+			#carousel3 img{width:320px;}
 		}
