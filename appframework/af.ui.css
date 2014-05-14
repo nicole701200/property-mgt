@@ -1839,9 +1839,9 @@ background-image: linear-gradient(to bottom, #5C6777 0%, #3F4D5B 100%);
 
 #afui.android #navbar a.pressed {
  	border:0px;
- 	border-top:4px solid #33B5E5;
+ 	xborder-top:4px solid #33B5E5;
  	border-radius:0px;
- 	background:#212c37;
+ 	xbackground:#212c37;
 }
 
 #afui.android #navbar .icon.pressed:before {
