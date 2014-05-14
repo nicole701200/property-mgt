@@ -3585,7 +3585,7 @@ header{background:#CCC !important;}
     .grid-photo li {width: 27%; padding-bottom: 27%;}
 }
 @media only screen and (max-width : 320px) {
-    .grid-photo li {width: 35.3%; padding-bottom: 35.3%;}
+    .grid-photo li {width: 40.3%; padding-bottom: 40.3%;}
 } 
 
 
@@ -3632,4 +3632,8 @@ header{background:#CCC !important;}
 
 		.carousel_content {
 			-webkit-transform: translate3d(0, 0, 0);
+		}
+		
+		@media only screen and (max-width : 320px) {
+			#carousel img{width:330px;}
 		}
