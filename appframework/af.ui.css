@@ -1812,6 +1812,23 @@ color:inherit;
  	border-top:2px solid #888;
     border-bottom:none;
     padding:0;
+	/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #5C6777 0%, #3F4D5B 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #5C6777 0%, #3F4D5B 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top, #5C6777 0%, #3F4D5B 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5C6777), color-stop(1, #3F4D5B));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #5C6777 0%, #3F4D5B 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom, #5C6777 0%, #3F4D5B 100%);
 }
 
 #afui.android #navbar a {
