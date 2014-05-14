@@ -1817,13 +1817,14 @@ color:inherit;
 #afui.android #navbar a {
 	color:inherit;
     top:10px;
+	
 }
 
 #afui.android #navbar a.pressed {
  	border:0px;
  	border-top:4px solid #33B5E5;
  	border-radius:0px;
- 	background:none;
+ 	background:#212c37;
 }
 
 #afui.android #navbar .icon.pressed:before {
